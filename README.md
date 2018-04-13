@@ -18,16 +18,16 @@ which worked better on small maps with many players.
 
 At each iteration of the game, my bot does the following in order:
 
-1. Instruct frontline squares to overkill enemies
+1. __*Instruct frontline squares to overkill enemies*__
 - Calculate the enemy influence map, which is the sum of enemy strengths affecting a given tile after 1 move. The implementation is inspired by [this post](http://aigamedev.com/open/tutorial/influence-map-mechanics/).
 - Using the influence map, prioritize my frontline squares to move to a tile where the overkill mechanism can kill the most enemies. If a kill is not possible, check the second lines and see if combining squares is more beneficial.
-2. Use the grassfire algorithm for path planning
+2. __*Use the grassfire algorithm for path planning*__
 - Run the grassfire algorithm on the map, which yields the distance needed to the closest enemy tile. The implementation is inspired by [this post](http://aigamedev.com/open/tutorial/influence-map-mechanics/).
 - Using different cutoffs (through trial and error) of (my owned sites / total sites) ratio, instruct a percentage of my tiles to attack the enemy.
-3. Search for production
+3. __*Search for production*__
 - Retrieve a list of neighboring target unowned squares sorted by cost or (prod / str).
 - For every target, route my squares that are within 3 moves. Also decide whether it is better for some squares to stay still instead when the occupied production is high enough.
-4. Route the unmoved squares to either an enemy or untargeted prod
+4. __*Route the unmoved squares to either an enemy or untargeted prod*__
 - Make sure that every move does not result in combining squares with > 255 + 10 strength.
 
 # Running the bot locally
@@ -56,7 +56,9 @@ To visualize the match, you can upload it to the [halite visualizer](https://201
 
 # Sample game replay
 
-Here is a replay of a game where my bot () won:
+Here is a replay of a game where my bot (in red) won (can also be viewed [here](https://2016.halite.io/game.php?replay=ar1487266971-1401338381.hlt)):
+
+![alt text](https://github.com/frabi/halite-2016-bot/replay.gif "")
 
 
 
