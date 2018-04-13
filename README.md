@@ -58,7 +58,7 @@ To visualize the match, you can upload it to the [halite visualizer](https://201
 
 Here is a replay of a game where my bot (in red) won (can also be viewed [here](https://2016.halite.io/game.php?replay=ar1487266971-1401338381.hlt)):
 
-![alt text](https://github.com/frabi/halite-2016-bot/replay.gif "")
+![alt text](https://github.com/frabi/halite-2016-bot/blob/master/replay.gif "")
 
 
 
