@@ -32,7 +32,7 @@ At each iteration of the game, my bot does the following in order:
 
 # Running the bot locally
 
-You can run a match between MyBot.py and RandomBot.py locally by invoking the following:
+You can run a match between `MyBot.py` and `RandomBot.py` locally by invoking the following:
 
 ```
 ./halite -d "34 34" -s 123 "python3 MyBot.py" "python3 RandomBot.py"
